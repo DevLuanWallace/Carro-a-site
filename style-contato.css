@@ -1,0 +1,197 @@
+body {
+	font-family: 'Saira Condensed', sans-serif;
+}
+
+header {
+	background: #000000;
+	padding: 15px 0;
+}
+
+#logo_principal {
+	width: 60%;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;						/*  torna a posicao do bloco caixa (imagem + menu) relative, para o <nav> se tornar absoluto ao bloco caixa (e se posicionar onde quiser dentro dele)  */
+	width: 90%;												/*  largura da caixa */
+	margin: 0 auto;											/* define uma margem para essa class="caixa" (q une a imagem com o menu) para se alinhar automaticamente ao meio*/
+}
+
+nav {
+		position: absolute;                                     /* a posicao eh absolute para que ele posso se posicionar aonde quiser referente ao bloco caixa (imagem + menu) */
+		top: 148px;
+		right: 0;
+}
+
+nav ul {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 32px;
+	padding: 0px 20px;
+}
+
+nav li {
+	display: inline;														/* organiza os elementos um ao lado do outro */
+	margin: 0 0 0 10px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #FFFFFF;
+	}
+
+nav a:hover {																/*  para quando passar o mouse por cima do elemento */
+	color: #C78C19;																	/* muda de cor */
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+main {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.titulo-principal {
+
+	margin: 1.5em auto;
+	font-size: 45px;
+	font-weight: bold;
+}
+
+form {
+	margin: 5em 0;
+}
+
+form label {												/* por padrao o FORM é predefinido com DISPLAY INLINE */
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+	line-height: 0.5;                             /*  line-height diminui o espaçamento entre as linhas de texto  */
+}
+
+form legend{												/* por padrao o FORM é predefinido com DISPLAY INLINE */
+	display: block;
+	font-size: 20px;
+	margin: 10px 0 20px;
+	padding-top: 10px;                /* precisei por padding, mas era pra ser margin  */
+}
+
+
+
+.input-padrao {											/* por padrao o FORM é predefinido com DISPLAY INLINE */
+	display: block;
+	margin: 0 0 18px;
+	padding: 7px 25px;									/*  padding do elemento <input> serve para aumentar ou diminuir o tamanho da caixa */
+	width: 50%;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+.prioridade2 {												/* AREA DE SELECAO */
+	color: red;
+	
+}
+
+																/*==============         ATENÇAO        ============= */
+									/* prioridade no CSS é ID > CLASS > TAG. Se um comando for direcionado para um mesmo elemento de forma diferente, a prioridade é sempre
+											do ID e depois da CLASS e depois da TAG. E se colocar o Inline é mais prioritario que todos ex. style="color: purple" em 
+																																			uma tag no html (teste isso!)  */
+
+#prioridade1 {												/* AREA DE SELECAO */
+	color: blue;
+	
+}
+
+															
+.enviar {
+	width: 40%;
+	padding: 15px 0;
+	background: palevioletred;
+	color: white;
+	border: 2px;
+	border-radius: 10px;
+	font-size: 15px;
+	transition: 1.5s background;                     /* "trasition" define o tempo q as coisas irão mudar, como por exemplo o background */
+	transition: 0.2s transform;					/* transicao de aumento de tamanho */
+	cursor: pointer;                        /*  muda o cursor do mouse para uma "maozinha" [simbolo clicavel] */
+}
+
+.enviar:hover {
+	background: red; 
+						           /*  "transform" transforma todo a propriedade em conjunto(sem precisar alterar um elemento por vez. Para dar mais de 1 transform, coloca-se junto! */
+	transform: rotate(1.5deg) scale(1.1);			/* Pois o CSS só faz o ultimo que foi definido.  O rotate gira em N graus e o scale define a escala de aumento de Tamanho  */
+}													
+
+
+table {
+	margin: 20px 0;
+}
+
+thead {
+	background: #555555;
+	color: white;
+	font-weight: bold;
+
+}
+
+td, th {
+	border: 1px solid #000000;
+	padding: 8px 15px;
+}
+
+
+.localizacao {
+	width: 1200px;
+	text-align: left;
+	margin: 2em auto;                          
+}
+
+#localizacao-paragrafo {
+	font-size: 23px;
+	margin-top: 6em;
+	text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+.localizacao iframe {
+	margin-top: 2em;
+	box-shadow: 2px 5px 5px rgba(0,0,0,0.3);            /*  adicionei uma sombra "box-shadow: X Y EspessuraSombra COR"  */ /* rgba(Nvermelho,Nverde,Nazul,Opacidade) */
+	opacity: 0.6;
+	transition: 1s;
+	border-radius: 15px;
+}
+
+.localizacao iframe:hover {
+	opacity: 1.0;
+}
+
+
+
+
+footer {
+	text-align: center;
+	background: #FFFFFF;
+	padding: 15px;
+	margin-top: 300px;
+	background: #CCCCCC;
+	/*  background: url("imagem.png") */                              /* ele coloca uma imagem no rodape e se for menor, ele duplica ela ate o final da largura do navegador */
+}
+
+footer img {
+	width: 2.5%;
+	position: relative;
+}
+
+#copyright {
+	font-size: 15px;
+
+}

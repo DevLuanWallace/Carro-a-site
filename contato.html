@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">															<!--  traduz ao navegador o texto q esta inserido  -->		
+		<title> Carroça </title>															<!--  titulo que aparece na aba   -->
+		<link rel="stylesheet" href="reset.css">										<!--  linka o arquivo .css que remove as predefinicoes do site  --> 
+		<link rel="stylesheet" href="style-contato.css">											<!--  linka o arquivo .css que da aparencia e organizacao ao site  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap" rel="stylesheet">		
+
+	</head>
+		
+	<body>	
+		<header>
+			<div class="caixa">
+				<img src="carro_logo_principal.png" id="logo_principal"  alt="Logo do Site Carroças">    <!-- permite que usuarios com dificuldade de visão saibam o que é a 
+																																	imagem, melhorando a acessibilidade -->
+				
+				<nav>
+					<ul class="menu">
+						<li><a href="home.html"> home </a></li>
+						<li><a href="catalogo.html"> catalogo </a></li>
+						<li><a href="contato.html"> contato </a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<main>
+
+			<p class="titulo-principal"> Fale Conosco!</p>
+
+			<form>														<!-- mais uma <div> semantica que indica formulario */ -->
+			
+			<!--      NOME SOBRENOME     -->
+				<label for="nomesobrenome"> Nome Completo </label>                  <!-- <label> sempre está em conjunto com <input>  /  for é para o clique ir para o input-->
+				<input type="text" id="nomesobrenome" class="input-padrao" required>					<!-- "required" = campo obrigatorio-->		<!-- caixa de texto -->
+
+			<!--          EMAIL        -->
+				<label for="email"> Email </label>
+				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">         <!-- "required" = define que o campo é obrigatorio e como 
+																							deve ser preenchido  e "placeholder" = da um exemplo de como deve ser preenchido  -->
+
+			<!--      TELEFONE         -->
+				<label for="telefone"> Telefone </label>
+				<input type="tel" id="telefone" class="input-padrao" required placeholder="(XX)X XXXX-XXXX"> 
+
+
+			<!--   AREA DE MENSAGEM   -->
+			
+				<label for="mensagem"> Mensagem </label>
+				<textarea cols="30"  rows="10" id="mensagem" class="input-padrao"></textarea>            <!--  permite ao usuario colocar um texto maior, é uma tag de conteudo de 
+																																						mais de uma linha -->
+
+			<!-- AREA DE SELEÇÃO  -->
+				<fieldset>	              <!--   <fieldset> eh uma <div> que organiza todas as areas de dados a serem preenchidas para um determinado assunto -->
+					
+					<legend class="prioridade2" id="prioridade1"> Como prefere o nosso contato? </legend>       <!-- <legend> é um paragrafo (mesma coisa que <p>) de fieldset  -->
+					<label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">	 Email </label>				<!-- botao de seleção para escolha -->
+												
+					
+					<label for="radio-telefone"><input type="radio" name="contato"  value="telefone" id="radio-telefone"> Telefone </label>
+									
+
+					<label for="radio-whatsapp"><input type="radio" name="contato"  value="whatsapp" id="radio-whatsapp" checked> Whatsapp </label>	
+
+					<!-- name="contato" define o mesmo nome pra cada um, entao se marcar um, desmarcara outro pq so recebe uma so opção -->
+									<!-- "checked" da uma sugestao de escolha ao usuario (ja deixa marcado o whatsapp como no caso) -->
+
+
+				</fieldset>
+
+				<fieldset>                  <!--   <fieldset> eh uma <div> que organiza todas as areas de dados a serem preenchidas para um determinado assunto -->
+
+					<legend> Qual o horário quer ser atendido? </legend>         <!-- <legend> é um paragrafo (mesma coisa que <p>) de fieldset  --> 
+					<select> 											<!-- select é um elemento de seleção de escolhas -->
+						<option> Manhã </option>						<!-- option serve para definir as opções de escolhas  -->
+						<option> Tarde </option>
+						<option> Noite </option>
+					</select>
+				
+				</fieldset>
+
+				<label class="checkbox" for="novidades"><input type="checkbox" id="novidades" checked> Deseja receber nossas novidades por email? </label>
+																				<!-- "checked" da uma sugestao de escolha ao usuario (ja deixa marcado o whatsapp como no caso) -->
+
+				<!--    BOTAO ENVIO       -->
+				<input type="submit" value="Enviar formulário" class="enviar">                <!-- "submit" é um botão de clique e o "value" é o texto escrito dentro do botão -->
+
+			</form>
+			
+			<table>												<!-- TABLE serve para criação de tabela -->
+				
+				<thead>							<!-- <THEAD> significa cabeçalho da tabela -->
+					<tr>															<!-- linha 1 da tabela -->
+						<th> Dia </th>			     <!--  <TH> significa coluna do cabeçalho  -->  	<!-- coluna 1 da tabela -->          
+						<th> Horário </th>														<!-- coluna 2 da tabela -->
+					</tr>
+				</thead>									
+
+				<tbody>								<!-- <TBODY> significa corpo da tabela -->
+					<tr>															<!-- linha 2 -->
+						<td> Segunda </td>														<!-- coluna 1 -->
+						<td> 8h - 20h </td>														<!-- coluna 2 -->
+					</tr>						
+					<tr>															<!-- linha 3 -->
+						<td> Quarta </td>														<!-- coluna 1 -->
+						<td> 8h - 20h </td>														<!-- coluna 2 -->
+					</tr>
+					<tr>															<!-- linha 4 -->
+						<td> Sexta </td>														<!-- coluna 1 -->
+						<td> 8h - 20h </td>														<!-- coluna 2 -->
+					</tr>
+				
+				</tbody>
+
+			</table>
+
+			<section class="localizacao">
+
+				<p id="localizacao-paragrafo"> Lembre-se de dar uma passadinha na nossa empresa! </p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.0070062181057!2d-43.22522208441711!3d-22.986769846510345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd452aa2c5fc7%3A0xf7d2d461b2252b2d!2sAv.%20Delfim%20Moreira%2C%20710%20-%20Leblon%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022441-000!5e0!3m2!1spt-BR!2sbr!4v1645887362198!5m2!1spt-BR!2sbr" width="1200" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+				<!-- foi pego a localizacao direto do site do Google Maps -->
+
+			</section>
+
+
+		</main>
+
+		<footer>
+			<img src="logo-rodape.png" alt="Segundo logo do site">    <!-- permite que usuarios com dificuldade de visão saibam o que é a imagem, melhorando a acessibilidade -->
+			<p id="copyright"> &copy; Copyright Carroças - 2022 </p>                        <!-- &copy significa o simbolo do copyright em unicode  -->
+		</footer>
+	</body>
+
+</html>

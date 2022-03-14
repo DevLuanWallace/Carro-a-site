@@ -1,0 +1,232 @@
+body {
+	font-family: 'Saira Condensed', sans-serif;
+}
+
+header {
+	background: #000000;
+	padding: 15px 0;
+}
+
+#logo_principal {
+	width: 60%;
+	padding: 29px 0;
+}
+
+.caixa {
+	position: relative;						/*  torna a posicao do bloco caixa (imagem + menu) relative, para o <nav> se tornar absoluto ao bloco caixa (e se posicionar onde quiser dentro dele)  */
+	width: 90%;												/*  largura da caixa */
+	margin: 0 auto;											/* define uma margem para essa class="caixa" (q une a imagem com o menu) para se alinhar automaticamente ao meio*/
+}
+
+nav {
+		position: absolute;                                     /* a posicao eh absolute para que ele posso se posicionar aonde quiser referente ao bloco caixa (imagem + menu) */
+		top: 188px;
+		right: 0;
+}
+
+nav ul {
+	text-transform: uppercase;                                   /* deixa as letras em maiusculo */
+	font-weight: bold;
+	font-size: 40px;
+	padding: 0px 20px;
+}
+
+nav li {
+	display: inline;							/* INLINE organiza os elementos um ao lado do outro, pois diferente do block, os elemento nao ocupam a largura da pagina */
+	margin: 0 0 0 10px;                                /*  INLINE-BLOCK usa o espaço entre as tags do html, se definir um com 40% e outro com 60% nao deve ter espaço no html  */
+}
+
+nav a {
+	text-decoration: none;                                   /*  remove a decoração de link */
+	color: #FFFFFF;
+	}
+
+nav a:hover {																/*  para quando passar o mouse por cima do elemento */
+	color: #C78C19;																	/* muda de cor */
+	text-decoration: underline;
+}
+
+
+
+
+
+
+.banner {
+	width: 100%;
+	margin-bottom: 50px;
+	opacity: 0.8;                                      /* define a opacidade do elemento, tornando ele mais ou menos transparente  */
+	transition: 1s;									/* transition de opacidade em 1 segundo */
+}
+
+
+.banner:hover {
+	opacity: 1.0;                                     
+	
+}
+
+main {
+	width: 90%;
+	margin: 0 auto;                                          /*sem margem vertical e margem horizontal igual para ambos os lados (mas primeiro deve-se definir o "width" )*/
+}
+
+.titulo-principal {
+	text-align: center;
+	font-size: 50px;                    
+	margin: 50px 0 1em;									/* "em" significa tamanho base, ou seja, 2em = 2 vezes o tamanho base */
+	font-weight: bold;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.33);            /* adiciona uma sombra ao texto (no caso botei com opacidade minima para ficar sutil) */
+}
+
+
+main section p {
+	margin: 0 0 1em;									  
+	font-size: 27px;
+	padding-top: 10px;
+
+}
+
+p strong {
+	font-weight: bold;
+}
+
+
+main .carroca {
+	width: 7%;
+	float: left;                                       /*  sem precisar do position, o float define o espaço para o elemento deixando os outros elementos ao redor  */
+	margin: 0 20px 15px 0;								/* float afeta a estrutura da pagina pois muda a posicao do que ficava em baixo dele, desalinhando o resto. Entao deve-se por */
+}															/* clear: left no elemento logo a baixo deles */
+
+
+.lista-servicos {
+	width: 90%;
+	margin: 8em auto;
+	text-align: center;
+}
+
+.servicos {
+	text-transform: uppercase;
+	font-size: 2em;
+	clear: left;									/* "clear:left" remove o desalinhamento do float */
+	display: inline-block;
+	margin: 0 8px;
+}
+
+
+.servicos:nth-child(2n) {               /*  "nth-child(2n)" permite que a cada 2 itens da mesma lista tenha um style diferente dos demais, assim como "first child" pro primeiro */
+	font-weight: bold;																								/* nth-child(3) o terceiro e "last-child" pro ultimo */
+}
+
+
+section #visitar {
+	margin-top: 6em;
+
+}
+
+
+.localizacao {
+	text-align: center;                          /*  deixou o texto e o bloco de localização centralizados */
+}
+
+.localizacao iframe {
+	box-shadow: 2px 5px 5px rgba(0,0,0,0.2);            /*  adicionei uma sombra "box-shadow: X Y EspessuraSombra COR"  */ /* rgba(Nvermelho,Nverde,Nazul,Opacidade) */
+	opacity: 0.6;
+	transition: 1s;
+}
+
+.localizacao iframe:hover {
+	opacity: 1.0;
+}
+
+.video {
+	width: 1200px ;															/*  defino a mesma largura do bloco de localizacao e centralizo com margin: N auto  */
+	text-align: left;														/*  texto nao é centralizado.  */
+	margin: 14em auto;	
+}
+
+.video iframe {
+	box-shadow: 2px 5px 5px rgba(0,0,0,0.4);            /*  adicionei uma sombra "box-shadow: X Y EspessuraSombra COR"  */ /* rgba(Nvermelho,Nverde,Nazul,Opacidade) */
+}
+
+.video p {
+	font-weight: bold;
+}
+
+section iframe {
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+footer {
+	text-align: center;
+	background: #FFFFFF;
+	padding: 15px;
+	margin-top: 300px;
+	background: #CCCCCC;
+	/*  background: url("imagem.png") */                              /* ele coloca uma imagem no rodape e se for menor, ele duplica ela ate o final da largura do navegador */
+}
+
+footer img {
+	width: 2.5%;
+	position: relative;
+}
+
+#copyright {
+	font-size: 15px;
+
+}
+
+
+/*  PARA MOBILE  */
+
+@media screen and (max-width: 480px) {           /*  Esta propriedade define um style diferente caso a resolucao da tela do dispositivo nao ultrapasse 480px de largura */
+	.caixa, .bannet, .localizacao, .video, section {
+		width: auto;
+	}
+
+	#logo_principal{
+		width: 70%;
+	}
+
+	.localizacao iframe, .video iframe {
+		width: 100%;
+	}
+
+	nav {
+		right: 0;
+		top: 30px;
+	}
+
+	nav ul{
+		font-size: 25px;
+	}
+
+	nav li {
+		display: block;
+	}
+
+
+
+
+	main .carroca {
+	width: 20%;
+	float: left;                                       /*  sem precisar do position, o float define o espaço para o elemento deixando os outros elementos ao redor  */
+	margin: 0 10px 5px 0;								/* float afeta a estrutura da pagina pois muda a posicao do que ficava em baixo dele, desalinhando o resto. Entao deve-se por */
+	}															/* clear: left no elemento logo a baixo deles */
+	
+	.servicos{
+		font-weight: bold;
+	}
+
+
+
+	footer img {
+	width: 25%;
+	
+}
+} 

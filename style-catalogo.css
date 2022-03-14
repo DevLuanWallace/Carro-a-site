@@ -1,0 +1,122 @@
+body {
+	font-family: 'Saira Condensed', sans-serif;
+}
+
+header {
+	background: #000000;
+	padding: 15px 0;
+}
+
+#logo_principal {
+	width: 60%;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;						/*  torna a posicao do bloco caixa (imagem + menu) relative, para o <nav> se tornar absoluto ao bloco caixa (e se posicionar onde quiser dentro dele)  */
+	width: 90%;												/*  largura da caixa */
+	margin: 0 auto;											/* define uma margem para essa class="caixa" (q une a imagem com o menu) para se alinhar automaticamente ao meio*/
+}
+
+nav {
+		position: absolute;                                     /* a posicao eh absolute para que ele posso se posicionar aonde quiser referente ao bloco caixa (imagem + menu) */
+		top: 148px;
+		right: 0;
+}
+
+nav ul {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 32px;
+	padding: 0px 20px;
+}
+																/*           ############            ATENCAO                #############        */
+nav li {											/*  DISPLAY BLOCK: (pre definido) o elemento ocupa largura da pagina, por isso organia um em baixo do outro */							
+	display: inline;						     /*     DISPLAY INLINE:  O elemento ocupa apenas o tamanho dele, por isso organiza os elementos um ao lado do outro */
+	margin: 0 0 0 10px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #FFFFFF;
+	}
+
+nav a:hover {																/*  para quando passar o mouse por cima do elemento */
+	color: #C78C19;																	/* muda de cor */
+	text-decoration: underline;
+}
+
+section {
+	width: 1180px;
+	margin: 60px auto;   													/*  para ficar com espaçamento automatico dos lados (para ficar no meio)  */                                      
+}
+
+
+section div {
+	display: inline-block;
+	vertical-align: top;
+
+	height: 280px;                                                  /* defino q a altura de cada caixa é 280px, para nao seguir o tamanho do conteudo */
+
+	box-sizing: border-box;                                         /*  o tamanho definido será baseado a partir da borda da caixa  */
+	border-color: #000000;
+	border-top: 2px;																		/*  espessura da borda */
+	border-style: solid;															/* estilo da borda */
+	/* border: 2px solid #000000; */
+	
+
+	border-radius: 10px;                                                 /*  deixa bordas arredondas  */
+}
+
+
+
+section div: active {												/*   para quando eu clicar com o mouse no elemento */
+	color: #32CD32;	
+	border-color: #32CD32;																/* cor fica verde */
+}
+
+
+.nome_categoria {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 25px;
+	vertical-align: top;
+}
+
+section div:hover {															/*  para quando passar o mouse por cima do elemento  */
+	border-color: #C78C19;													/* borda muda de cor, tem underline no texto e a cor dele fica amarelo */
+
+} 
+
+
+section div:hover .nome_categoria{															/*  para quando passar o mouse por cima do elemento  */
+	border-color: #C78C19;													/* borda muda de cor, tem underline no texto e a cor dele fica amarelo */
+	color: #C78C19;
+	/* font-size: 26px */;									/*  Quando o mouse passar por cima da section div(categoria dos carros), a forçara a mudança de tamanho da fonte  */
+
+} 
+
+section img {
+	width: 300px;
+	padding: 35px;
+}
+
+footer {
+	text-align: center;
+	background: #FFFFFF;
+	padding: 15px;
+	margin-top: 300px;
+	background: #CCCCCC;
+	/*  background: url("imagem.png") */                              /* ele coloca uma imagem no rodape e se for menor, ele duplica ela ate o final da largura do navegador */
+}
+
+footer img {
+	width: 2.5%;
+	position: relative;
+}
+
+#copyright {
+	font-size: 15px;
+
+}
